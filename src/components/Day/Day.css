@@ -2,7 +2,6 @@
    position: relative;
    display: flex;
    flex-direction: column;
-   justify-content: start;
 }
 
 .day__name, .day__number {
@@ -34,7 +33,7 @@
    align-items:center;
 }
 
-.day img {
+.day__weather--icon {
    height: auto;
    width: 150px;
    /*position: absolute;*/
@@ -42,3 +41,38 @@
    left:0;
    top:40px;
 }
+
+.day__temperature {
+   font-family: "Oswald";
+   font-size: 100px;
+   margin: -1rem 0 3rem;
+   line-height: 100px;
+}
+
+.day__temperature--symbol {
+   font-size: 30px;
+   line-height: 34px;
+   width: 80%;
+   text-align: right;
+   margin:0;
+   margin-top:2rem;
+   padding: 0;
+}
+
+.day__rainchance {
+   font-family: "Oswald";
+   font-size: 30px;
+   line-height: 50px;
+}
+
+.day__rainchance--logo {
+   height: 30px;
+   width: auto;
+   margin-right: 5px;
+}
+
+svg {
+   color:blue;
+}
+
+

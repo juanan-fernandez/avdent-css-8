@@ -1,0 +1,44 @@
+.day {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+}
+
+.day__name, .day__number {
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+
+.day__name {
+   font-size: 32px;
+   line-height: 40px;
+   letter-spacing: 0.2em;
+   text-align: center;
+   margin:0;
+   padding: 0;
+}
+
+.day__number {
+   font-size: 70px;
+   line-height: 100px;
+   text-align: center;
+}
+
+
+.day__weather {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items:center;
+}
+
+.day img {
+   height: auto;
+   width: 150px;
+   /*position: absolute;*/
+   z-index: 10;
+   left:0;
+   top:40px;
+}

@@ -1,5 +1,13 @@
+export enum WStates {
+	cloudy = 'cloudy',
+	sunny = 'sunny',
+	rainy = 'rainy',
+	stormy = 'stormy',
+	snowy = 'snowy',
+	partlycloudy = 'partly-cloudy',
+}
 export interface Weather {
-	description: string;
+	description: WStates;
 	dayNumber: number;
 	dayName: string;
 	temperature: number;

@@ -49,6 +49,8 @@
    line-height: 100px;
 }
 
+/*clases colores para la fuente de .day__temperature*/
+
 .day__temperature--symbol {
    font-size: 30px;
    line-height: 34px;

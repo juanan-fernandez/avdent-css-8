@@ -1,6 +1,7 @@
+import { WStates } from '../interfaces/weather.d';
 export const data = [
 	{
-		description: 'cloudy',
+		description: WStates.cloudy,
 		dayName: 'wed',
 		dayNumber: 8,
 		temperature: 71,
@@ -8,7 +9,7 @@ export const data = [
 		minTemperature: 28,
 	},
 	{
-		description: 'sunny',
+		description: WStates.sunny,
 		dayName: 'thu',
 		dayNumber: 9,
 		temperature: 65,
@@ -16,7 +17,7 @@ export const data = [
 		minTemperature: 28,
 	},
 	{
-		description: 'stormy',
+		description: WStates.stormy,
 		dayName: 'fri',
 		dayNumber: 10,
 		temperature: 67,
@@ -24,7 +25,7 @@ export const data = [
 		minTemperature: 28,
 	},
 	{
-		description: 'snowy',
+		description: WStates.snowy,
 		dayName: 'sat',
 		dayNumber: 11,
 		temperature: 32,
@@ -32,7 +33,7 @@ export const data = [
 		minTemperature: 28,
 	},
 	{
-		description: 'partly-cloudy',
+		description: WStates.partlycloudy,
 		dayName: 'sun',
 		dayNumber: 12,
 		temperature: 57,
@@ -40,7 +41,7 @@ export const data = [
 		minTemperature: 30,
 	},
 	{
-		description: 'rainy',
+		description: WStates.rainy,
 		dayName: 'mon',
 		dayNumber: 13,
 		temperature: 63,
@@ -48,7 +49,7 @@ export const data = [
 		minTemperature: 28,
 	},
 	{
-		description: 'sunny',
+		description: WStates.sunny,
 		dayName: 'tue',
 		dayNumber: 14,
 		temperature: 71,

@@ -4,7 +4,7 @@ interface Props {
 	classColorName: string;
 }
 const Low = ({ classColorName }: Props) => {
-	const styles: CSSProperties = { display: 'inline-block' };
+	const styles: CSSProperties = { marginRight: '0px' };
 	return (
 		<div className={classColorName} style={styles}>
 			<svg

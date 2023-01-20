@@ -1,10 +1,8 @@
 import './Day.css';
 import Card from '../UI/Card/Card';
 import Low from '../UI/Low/Low';
+import Precip from '../UI/Precip/Precip';
 import { Weather } from '../../interfaces/weather';
-
-import low from '../../assets/low.svg';
-import precipitacion from '../../assets/precipitation.svg';
 
 interface Props {
 	weatherData: Weather;
@@ -28,15 +26,14 @@ const Day = ({ weatherData }: Props) => {
 					/>
 					<p className='day__temperature--symbol'>o</p>
 					<p className='day__temperature'>{temperature}</p>
-					<p className='day__rainchance'>
-						<img src={precipitacion} className='day__rainchance--logo' />
-						{rainChance} %
-					</p>
-					<p className='day__rainchance'>
-						{/* <img src={low} className='day__rainchance--logo' /> */}
-						<Low classColorName='azul' />
-						{minTemperature}º
-					</p>
+					<div className='day__precip-low'>
+						<Precip classColorName='precip__blue' />
+						{rainChance}%
+					</div>
+					<div className='day__precip-low'>
+						<Low classColorName='low__blue' />
+						{minTemperature}º<span></span>
+					</div>
 				</div>
 			</Card>
 		</div>

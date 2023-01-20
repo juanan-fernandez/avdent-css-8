@@ -59,20 +59,24 @@
    padding: 0;
 }
 
-.day__rainchance {
+.day__precip-low {
    font-family: "Oswald";
    font-size: 30px;
-   line-height: 50px;
+   height: 45px;
+   width: 80%;
+   display: flex;
+   justify-content: space-evenly;
+   align-content: center;
+   align-items: center;
+   gap:0.1rem;
 }
 
-.day__rainchance--logo {
-   height: 30px;
-   width: auto;
-   margin-right: 5px;
+.day__precip-low span {
+   width: 4px;
 }
 
-svg {
-   color:blue;
-}
+
+
+
 
 

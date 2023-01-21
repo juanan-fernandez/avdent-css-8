@@ -15,37 +15,15 @@
   -webkit-text-size-adjust: 100%;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 html{
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  padding: 0;
   display: flex;
   place-items: center;
-  /* max-width: 100vw; */
-=======
-=======
->>>>>>> cd32b1a046aff4f75aa395228e838761dba9108d
-=======
->>>>>>> cd32b1a046aff4f75aa395228e838761dba9108d
-
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cd32b1a046aff4f75aa395228e838761dba9108d
-=======
->>>>>>> cd32b1a046aff4f75aa395228e838761dba9108d
-=======
->>>>>>> cd32b1a046aff4f75aa395228e838761dba9108d
   min-width: 320px;
   min-height: 100vh;
 }

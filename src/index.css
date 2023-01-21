@@ -15,6 +15,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
+<<<<<<< HEAD
 html{
   box-sizing: border-box;
 }
@@ -25,6 +26,14 @@ body {
   display: flex;
   place-items: center;
   /* max-width: 100vw; */
+=======
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+>>>>>>> cd32b1a046aff4f75aa395228e838761dba9108d
   min-width: 320px;
   min-height: 100vh;
 }

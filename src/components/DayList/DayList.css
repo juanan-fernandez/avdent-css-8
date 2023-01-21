@@ -1,6 +1,7 @@
 .dayslist{
    width: 100vw;
 <<<<<<< HEAD
+<<<<<<< HEAD
    max-width: 100vw;
    display: flex;
    justify-content: space-around;
@@ -8,9 +9,15 @@
 
 /*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*/
 =======
+=======
+>>>>>>> cd32b1a046aff4f75aa395228e838761dba9108d
    padding: 1rem;
    display: flex;
    justify-content: space-around;
    
+<<<<<<< HEAD
+}
+>>>>>>> cd32b1a046aff4f75aa395228e838761dba9108d
+=======
 }
 >>>>>>> cd32b1a046aff4f75aa395228e838761dba9108d

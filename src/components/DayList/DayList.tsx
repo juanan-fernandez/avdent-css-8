@@ -4,7 +4,7 @@ import Day from '../Day/Day';
 
 const DayList = () => {
 	const list = data.map(day => {
-		return <Day weatherData={day} />;
+		return <Day key={day.dayName + day.dayNumber} weatherData={day} />;
 	});
 	return <div className='dayslist'>{list}</div>;
 };

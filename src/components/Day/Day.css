@@ -26,6 +26,7 @@
 }
 
 
+
 .day__weather {
    display: flex;
    flex-direction: column;
@@ -50,6 +51,18 @@
 }
 
 /*clases colores para la fuente de .day__temperature*/
+.day__temperature--sunny{
+   color: #4DB0D3;   
+}
+
+.day__temperature--cloudy, .day__temperature--stormy,
+.day__temperature--rainy, .day__temperature--partly-cloudy{
+   color: #E6DF95;   
+}
+
+.day__temperature--snowy{
+   color: #0E2E3A;   
+}
 
 .day__temperature--symbol {
    font-size: 30px;
@@ -75,6 +88,15 @@
 
 .day__precip-low span {
    width: 4px;
+}
+
+.day__precip-low--cloudy, .day__precip-low--stormy, 
+.day__precip-low--rainy, .day__precip-low--partly-cloudy {
+   color:#D3EBF4;
+}
+
+.day__precip-low--sunny, .day__precip-low--snowy {
+   color:#247490;
 }
 
 

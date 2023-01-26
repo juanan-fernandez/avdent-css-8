@@ -30,18 +30,45 @@
 .day__weather {
    display: flex;
    flex-direction: column;
-   justify-content: space-evenly;
+   height: 95%;
+   justify-content: flex-end;
    align-items:center;
 }
 
 .day__weather--icon {
    height: auto;
-   width: 150px;
-   /*position: absolute;*/
-   z-index: 10;
-   left:0;
-   top:40px;
+   width: 190px;
+   position: absolute;
+   z-index: 1;
+   top:150px;
 }
+
+.day__weather--cloudy {
+   width: 200px;
+   top:160px;
+}
+
+.day__weather--sunny {
+   width: 180px;
+   top:140px;
+}
+
+.day__weather--rainy {
+   top:125px;
+   left: 20px; 
+   width: 150px;
+}
+
+.day__weather--stormy {
+   width: 200px;
+   left: -14px;
+}
+
+.day__weather--snowy {
+   width: 160px;
+   left: 0px;
+}
+
 
 .day__temperature {
    font-family: "Oswald";
@@ -51,16 +78,15 @@
 }
 
 /*clases colores para la fuente de .day__temperature*/
-.day__temperature--sunny{
+.day__temperature--blue{
    color: #4DB0D3;   
 }
 
-.day__temperature--cloudy, .day__temperature--stormy,
-.day__temperature--rainy, .day__temperature--partly-cloudy{
+.day__temperature--yellow{
    color: #E6DF95;   
 }
 
-.day__temperature--snowy{
+.day__temperature--black{
    color: #0E2E3A;   
 }
 
@@ -90,12 +116,12 @@
    width: 4px;
 }
 
-.day__precip-low--cloudy, .day__precip-low--stormy, 
-.day__precip-low--rainy, .day__precip-low--partly-cloudy {
+/*clases de colores para los textos de precipitacion y mínimas*/
+.day__precip-low--white {
    color:#D3EBF4;
 }
 
-.day__precip-low--sunny, .day__precip-low--snowy {
+.day__precip-low--blue{
    color:#247490;
 }
 

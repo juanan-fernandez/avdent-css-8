@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
 
-export function useFetch<T>(url: string) {
-	const [data, setData] = useState<[]>([]);
+export type HttpHookResponse = {
+	data: any;
+	loading: boolean;
+	error: string | null;
+};
+
+export function useFetch<T>(url: string): HttpHookResponse {
+	const [data, setData] = useState<any>(null);
 	const [loading, setLoading] = useState<boolean>(true);
 	const [error, setError] = useState<string | null>(null);
 	useEffect(() => {

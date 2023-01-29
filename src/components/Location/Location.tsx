@@ -15,11 +15,20 @@ const Location = ({ updateLocation }: LocationProps) => {
 		}
 	};
 
+	const handleGetCurrentLocation = () => {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(position => {
+				console.log('in location.tsx', position);
+				updateLocation(position.coords.latitude + ',' + position.coords.longitude);
+			});
+		}
+	};
+
 	return (
 		<section className='search'>
 			<div className='search__current'>
 				<p>Get your current location</p>
-				<button onClick={event => console.log(event)}> Get it!</button>
+				<button onClick={handleGetCurrentLocation}> Get it!</button>
 			</div>
 			<div className='search__location'>
 				<p>or enter a location here:</p>{' '}

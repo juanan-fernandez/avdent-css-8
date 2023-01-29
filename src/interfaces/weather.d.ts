@@ -5,6 +5,7 @@ export enum WStates {
 	stormy = 'stormy',
 	snowy = 'snowy',
 	partlycloudy = 'partly-cloudy',
+	undefined = 'undefined',
 }
 export interface Weather {
 	description: WStates;

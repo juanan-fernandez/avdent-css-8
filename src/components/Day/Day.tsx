@@ -10,10 +10,17 @@ interface Props {
 }
 
 const Day = ({ weatherData }: Props) => {
-	const { description, dayNumber, dayName, temperature, rainChance, minTemperature } =
-		weatherData;
+	const {
+		icon,
+		description,
+		dayNumber,
+		dayName,
+		temperature,
+		rainChance,
+		minTemperature,
+	} = weatherData;
 
-	const stylesDay = getColorsAndIcons(description);
+	const stylesDay = getColorsAndIcons(icon);
 
 	return (
 		<div className='day'>
@@ -24,7 +31,7 @@ const Day = ({ weatherData }: Props) => {
 					<img
 						className={`day__weather--icon ${stylesDay.classIcons}`}
 						src={`${stylesDay.sourceIcon}`}
-						alt='Partly Cloudy'
+						alt={description}
 					/>
 					<p className={`day__temperature--symbol ${stylesDay.tempColorClass}`}>o</p>
 					<p className={`day__temperature ${stylesDay.tempColorClass}`}>

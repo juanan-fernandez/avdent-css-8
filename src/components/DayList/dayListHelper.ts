@@ -20,7 +20,8 @@ const getConditions = (condition: string): WStates => {
 export const transformData = (data: []): Weather[] => {
 	const days: Weather[] = data.map(item => {
 		return {
-			description: WStates.cloudy,
+			icon: WStates.cloudy,
+			description: 'WStates.cloudy',
 			dayName: 'wed',
 			dayNumber: 8,
 			temperature: 71,

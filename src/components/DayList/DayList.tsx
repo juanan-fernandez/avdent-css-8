@@ -19,8 +19,14 @@ const DayList = ({ location }: DayListProps) => {
 	};
 	const [url, setUrl] = useState(getUrl);
 	const { data, loading, error }: HttpHookResponse = useFetch(url);
-	console.log(data.days);
+
 	let renderOutput: any = null;
+
+	if (error) {
+		console.log(error);
+		renderOutput = error;
+	}
+
 	if (loading) {
 		renderOutput = (
 			<div>
@@ -28,8 +34,10 @@ const DayList = ({ location }: DayListProps) => {
 			</div>
 		);
 	}
+
+	if (data) console.log(data);
 	if (data && null) {
-		const list = data.days.map((day: Weather) => {
+		renderOutput = data.days.map((day: Weather) => {
 			return <Day key={day.dayName + day.dayNumber} weatherData={day} />;
 		});
 	}

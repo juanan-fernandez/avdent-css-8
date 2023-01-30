@@ -1,5 +1,6 @@
 export enum WStates {
 	cloudy = 'cloudy',
+	foggy = 'foggy',
 	sunny = 'sunny',
 	rainy = 'rainy',
 	stormy = 'stormy',
@@ -8,7 +9,8 @@ export enum WStates {
 	undefined = 'undefined',
 }
 export interface Weather {
-	description: WStates;
+	icon: WStates;
+	description: string;
 	dayNumber: number;
 	dayName: string;
 	temperature: number;

@@ -8,7 +8,7 @@ interface WColors {
 	sourceIcon: string;
 }
 
-export const getColorsAndIcons = (description: string): WColors => {
+export const getColorsAndIcons = (icon: string): WColors => {
 	const colors: WColors = {
 		backcolorcard: '',
 		tempColorClass: '',
@@ -17,13 +17,20 @@ export const getColorsAndIcons = (description: string): WColors => {
 		sourceIcon: '',
 	};
 
-	switch (description) {
+	switch (icon) {
 		case WStates.cloudy:
 			colors.backcolorcard = '#4DB0D3';
 			colors.tempColorClass = 'day__temperature--yellow';
 			colors.infoColorClass = 'white';
 			colors.classIcons = 'day__weather--cloudy';
 			colors.sourceIcon = '/images/cloudy.svg';
+			break;
+		case WStates.foggy:
+			colors.backcolorcard = '#4DB0D3';
+			colors.tempColorClass = 'day__temperature--yellow';
+			colors.infoColorClass = 'white';
+			colors.classIcons = 'day__weather--cloudy';
+			colors.sourceIcon = '/images/fog.svg';
 			break;
 		case WStates.sunny:
 			colors.backcolorcard = '#E6DF95';

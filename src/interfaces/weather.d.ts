@@ -17,3 +17,14 @@ export interface Weather {
 	rainChance: number;
 	minTemperature: number;
 }
+
+export interface ApiWeatherDay {
+	datetime: string;
+	icon: string;
+	conditions: string;
+	description: string;
+	precipprob: number;
+	temp: number;
+	tempmax: number;
+	tempmin: number;
+}

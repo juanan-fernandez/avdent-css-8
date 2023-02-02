@@ -1,5 +1,5 @@
 .search{
-   width: 90%;
+   width: 99%;
    margin: 0rem auto 1.5rem auto;
    display: flex;
    flex-direction: column;
@@ -48,4 +48,15 @@
    outline: none;
    border-style: none;
    border-bottom: 1px solid #247490;
+}
+
+.search__resolvedlocation {
+   font-size: 16px;
+   margin-left: auto;
+   height: 30px;
+   align-content: center;
+   border-radius: 12px;
+   background-color: #247490;
+   color: #d3ebf4;
+   padding: 0.3rem 0.8rem;
 }

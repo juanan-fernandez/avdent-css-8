@@ -1,4 +1,4 @@
-import { Weather, WStates, ApiWeatherDay } from '../../interfaces/weather';
+import { Weather, WStates, ApiWeatherDay } from '../../interfaces/weather.d';
 
 const getDayOfWeek = (stringDate: string): string => {
 	const date = new Date(stringDate);
@@ -52,9 +52,9 @@ export const transformData = (data: ApiWeatherDay[]): Weather[] => {
 			description: item.description,
 			dayName: getDayOfWeek(item.datetime),
 			dayNumber: getDayOfMonth(item.datetime),
-			temperature: item.temp,
-			rainChance: item.precipprob,
-			minTemperature: item.tempmin,
+			temperature: Math.round(item.temp),
+			rainChance: Math.round(item.precipprob),
+			minTemperature: Math.round(item.tempmin),
 		};
 	});
 	return days;

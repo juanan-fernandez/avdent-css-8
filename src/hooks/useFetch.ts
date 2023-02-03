@@ -35,8 +35,3 @@ export function useFetch<T>(url: string): HttpHookResponse {
 
 	return { data, loading, error };
 }
-
-//https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/ALICANTE/next7days?unitGroup=metric&key=WPSBB3AZ7SEYL2L3LUPVQQXPN&contentType=json
-
-//const apiKey = process.env.REACT_APP_RAWG_APIKEY;
-//https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/alicante/next7days?unitGroup=metric&key=YOUR_API_KEY&contentType=json

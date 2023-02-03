@@ -38,7 +38,7 @@ const DayList = ({ location, updateResolvedLocation }: DayListProps) => {
 		renderOutput = <p>{error}</p>;
 	}
 
-	if (loading) {
+	if (loading || !location) {
 		renderOutput = (
 			<div>
 				<Spinner hexColor='#247490' pixelsSize={155} />
@@ -47,8 +47,6 @@ const DayList = ({ location, updateResolvedLocation }: DayListProps) => {
 	}
 
 	if (data) {
-		console.log(data);
-		//updateResolvedLocation(data.resolvedAddress);
 		const days = transformData(data.days);
 		renderOutput = days.map((day: Weather) => {
 			return <Day key={day.dayName + day.dayNumber} weatherData={day} />;

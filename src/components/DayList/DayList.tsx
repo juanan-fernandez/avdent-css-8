@@ -27,6 +27,10 @@ const DayList = ({ location, updateResolvedLocation }: DayListProps) => {
 	const [url, setUrl] = useState(getUrl);
 	const { data, loading, error }: HttpHookResponse = useFetch(url);
 
+	useEffect(() => {
+		if (data) updateResolvedLocation(data.resolvedAddress);
+	}, [data]);
+
 	let renderOutput: React.ReactNode = null;
 
 	if (error) {
@@ -44,7 +48,7 @@ const DayList = ({ location, updateResolvedLocation }: DayListProps) => {
 
 	if (data) {
 		console.log(data);
-		updateResolvedLocation(data.resolvedAddress);
+		//updateResolvedLocation(data.resolvedAddress);
 		const days = transformData(data.days);
 		renderOutput = days.map((day: Weather) => {
 			return <Day key={day.dayName + day.dayNumber} weatherData={day} />;

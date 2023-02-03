@@ -1,22 +1,41 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import DayList from './components/DayList/DayList';
 import Location from './components/Location/Location';
 
 function App() {
-	const getCurrentLocation = async (): Promise<any> => {
+	//const coords = JSON.parse(localStorage.getItem('coords'));
+	// const coords = useRef<string>('vacio');
+	// const getCurrentLocation = (): void => {
+	// 	if (navigator.geolocation) {
+	// 		navigator.geolocation.getCurrentPosition(
+	// 			(position: GeolocationPosition): void => {
+	// 				console.log(position);
+	// 				coords.current =
+	// 					position.coords.latitude + ',' + position.coords.longitude;
+	// 			}
+	// 		);
+	// 	}
+	// };
+
+	useEffect(() => {
 		if (navigator.geolocation) {
-			return await navigator.geolocation.getCurrentPosition(position => {
-				return position.coords.latitude + ',' + position.coords.longitude;
-			});
+			navigator.geolocation.getCurrentPosition(
+				(position: GeolocationPosition): void => {
+					console.log(position);
+					setLocation(position.coords.latitude + ',' + position.coords.longitude);
+				}
+			);
 		}
-	};
+	}, []);
 
-	const getInitLocation = (): any => {
-		getCurrentLocation().then(location => location);
-	};
+	// const getInitLocation = (): any => {
+	// 	getCurrentLocation();
+	// 	console.log(coords.current);
+	// 	return coords.current;
+	// };
 
-	const [location, setLocation] = useState<string>(getInitLocation());
+	const [location, setLocation] = useState<string>('');
 	const [resolvedLocation, setResolvedLocation] = useState<string>('');
 
 	const updateLocation = (locationToSearch: string): void => {

@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
+
 import './Location.css';
 
 interface LocationProps {

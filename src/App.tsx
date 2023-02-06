@@ -7,8 +7,6 @@ import Spinner from './components/UI/Spinner/Spinner';
 import { getCurrentLocation } from './components/Location/locationHelper';
 
 function App() {
-	//const coords = JSON.parse(localStorage.getItem('coords'));
-
 	const [location, setLocation] = useState<string>('');
 	const [resolvedLocation, setResolvedLocation] = useState<string>('');
 	const [saveNewLocation, storedLocation] = useLocalStorage('initLocation', '');
